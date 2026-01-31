@@ -1,0 +1,22 @@
+---
+import siteData from '../content/site/general.json';
+const { founders } = siteData;
+---
+
+<section class="teachers" id="teachers">
+    <div class="container">
+        <h2 class="section-title text-raisin">GründerInnen der Bewegungswelten</h2>
+        <div class="teachers-hero-image">
+            <img src={founders.image} alt="Unser gesamtes Trainer-Team der Bewegungswelten" class="trainers-group-photo" loading="lazy">
+        </div>
+        <div class="section-intro" style="max-width: 900px; margin: 3rem auto; text-align: center; padding: 0 2rem;">
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">{founders.textParagraph1}</p>
+            <p style="font-size: 1.1rem; line-height: 1.8;">{founders.textParagraph2}</p>
+        </div>
+        <div class="section-closing" style="max-width: 900px; margin: 3rem auto; text-align: center; padding: 0 2rem;">
+            <p style="font-size: 1.3rem; font-weight: 600; font-style: italic; color: var(--color-teal); line-height: 1.6;">
+                {founders.closingQuote}
+            </p>
+        </div>
+    </div>
+</section>

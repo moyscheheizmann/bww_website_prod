@@ -1,0 +1,26 @@
+---
+import siteData from '../content/site/general.json';
+const { cafe } = siteData;
+---
+
+<section class="cafe bg-beige" id="cafe">
+    <div class="container">
+        <h2 class="section-title text-raisin">{cafe.title}</h2>
+        <div class="cafe-grid">
+            <div class="cafe-copy">
+                <h3>{cafe.subtitle}</h3>
+                <p>{cafe.description}</p>
+                <ul class="cafe-features">
+                    {cafe.features.map((feature) => (
+                        <li><i class={`${feature.icon} text-teal`}></i> {feature.text}</li>
+                    ))}
+                </ul>
+            </div>
+            <div class="cafe-gallery">
+                {cafe.images.map((img, i) => (
+                    <img src={img} alt={`Gemütlicher Empfangsbereich – Bild ${i + 1}`} class="cafe-photo" loading="lazy">
+                ))}
+            </div>
+        </div>
+    </div>
+</section>

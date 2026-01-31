@@ -1,0 +1,18 @@
+---
+import siteData from '../content/site/general.json';
+const { hero } = siteData;
+---
+
+<section class="hero" id="home">
+    <video autoplay muted loop playsinline class="hero-bg-video" preload="none">
+        <source src={hero.video} type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h2 class="hero-title text-raisin">{hero.title}</h2>
+        <p class="hero-subtitle">{hero.subtitle}</p>
+        <a href="#studios" class="btn btn-apricot">{hero.ctaPrimary}</a>
+        <a href="#courses" class="btn btn-outline-white" style="margin-left: 1rem;">{hero.ctaSecondary}</a>
+    </div>
+</section>

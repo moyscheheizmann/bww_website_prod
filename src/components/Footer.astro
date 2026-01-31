@@ -1,0 +1,54 @@
+---
+import siteData from '../content/site/general.json';
+const { footer } = siteData;
+---
+
+<footer class="footer bg-teal">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <img src="/images/logo.png" alt="Bewegungswelten Logo" class="footer-logo" loading="eager">
+                    <h3 class="text-light">Bewegungswelten</h3>
+                </div>
+                <p class="text-light">{footer.tagline}</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 class="text-light">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#studios" class="text-light">Studios</a></li>
+                    <li><a href="#host-event" class="text-light">Events</a></li>
+                    <li><a href="#courses" class="text-light">Kurse</a></li>
+                    <li><a href="#teachers" class="text-light">Management</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="text-light">Partner Studios</h4>
+                <ul class="footer-links">
+                    <li><a href="#" class="text-light">Tanzstudio Billie's</a></li>
+                    <li><a href="#" class="text-light">TriBühne</a></li>
+                    <li><a href="#" class="text-light">Luftraum</a></li>
+                    <li><a href="#" class="text-light">Baladin</a></li>
+                    <li><a href="#" class="text-light">Stage Up</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="text-light">Rechtliches</h4>
+                <ul class="footer-links">
+                    <li><a href="#" class="text-light">Impressum</a></li>
+                    <li><a href="#" class="text-light">Datenschutz</a></li>
+                    <li><a href="#" class="text-light">AGB</a></li>
+                    <li><a href="#" class="text-light">Newsletter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="text-light">{footer.copyright}</p>
+        </div>
+    </div>
+</footer>

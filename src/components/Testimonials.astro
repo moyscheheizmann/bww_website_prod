@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import siteData from '../content/site/general.json';
+
+const testimonials = (await getCollection('testimonials')).sort((a, b) => a.data.order - b.data.order);
+const { trustIndicators } = siteData;
+---
+
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2 class="section-title text-raisin">Was unsere Mitglieder sagen</h2>
+        <div class="testimonials-carousel">
+            <div class="testimonials-track">
+                {testimonials.map((t) => {
+                    const d = t.data;
+                    return (
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="stars">
+                                    {Array.from({ length: d.stars }).map(() => (
+                                        <i class="fas fa-star"></i>
+                                    ))}
+                                </div>
+                                <p class="testimonial-text">"{d.text}"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <img src={d.avatar} alt={`${d.authorName} Avatar`} loading="lazy">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>{d.authorName}</h4>
+                                        <span>{d.authorRole}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+
+            <div class="testimonials-nav">
+                {testimonials.map((_, i) => (
+                    <button class={`nav-dot${i === 0 ? ' active' : ''}`} data-slide={i} aria-label={`Testimonial ${i + 1} anzeigen`}></button>
+                ))}
+            </div>
+        </div>
+
+        <div class="trust-indicators">
+            {trustIndicators.map((item) => (
+                <div class="trust-item">
+                    <div class="trust-number">{item.number}</div>
+                    <div class="trust-label">{item.label}</div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

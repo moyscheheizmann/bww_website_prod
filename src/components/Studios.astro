@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+
+const studios = (await getCollection('studios')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<section class="studios-carousel bg-beige" id="studios">
+    <div class="container">
+        <h2 class="section-title text-raisin">Studios</h2>
+        <div class="studios-scroll">
+            {studios.map((studio) => {
+                const d = studio.data;
+                return (
+                    <div class="studio-slide">
+                        <div class="studio-slide-image">
+                            <img src={d.image} alt={d.name} loading="lazy">
+                        </div>
+                        <div class="studio-slide-content">
+                            <h3>{d.name}</h3>
+                            <p class="studio-description">{d.description}</p>
+                            <a href="#" class="btn btn-outline-raisin">Mehr erfahren</a>
+                            <img src="/images/custom-logo.png" alt="Bewegungswelten Logo" class="studio-header-logo" style="width: 50px; height: auto; margin-top: 10px; opacity: 0.7;" loading="eager">
+                        </div>
+                    </div>
+                );
+            })}
+        </div>
+    </div>
+</section>

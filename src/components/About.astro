@@ -1,0 +1,36 @@
+---
+import siteData from '../content/site/general.json';
+const { about } = siteData;
+---
+
+<section class="about bg-beige" id="about">
+    <div class="container">
+        <h2 class="section-title text-raisin">Über uns / About Bewegungswelten</h2>
+        <div class="about-content">
+            <div class="about-image-container">
+                <img src={about.image} alt="Bewegungswelten Alte Dosenfabrik Gebäude" class="about-image" loading="lazy">
+            </div>
+            <p class="lead-text">{about.leadText}</p>
+            <div class="about-grid">
+                {about.features.map((item) => (
+                    <div class="about-item">
+                        <i class={`${item.icon} text-teal`}></i>
+                        <h3>{item.title}</h3>
+                        <p>{item.text}</p>
+                    </div>
+                ))}
+            </div>
+            <div class="about-map" aria-label="Karte – Bewegungswelten Studios">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2369.695766652606!2d9.9215921!3d53.563198199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b185ba81ce3da1%3A0xc96651867db5fae1!2sBewegungswelten%20Studios!5e0!3m2!1sen!2sde!4v1755353270496!5m2!1sen!2sde"
+                    width="100%"
+                    height="420"
+                    style="border:0;"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+</section>

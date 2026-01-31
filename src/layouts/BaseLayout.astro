@@ -1,0 +1,301 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Bewegungswelten Alte Dosenfabrik - 7 Kreative Studios in Hamburg | Tanz, Circus, Yoga',
+  description = 'Bewegungswelten Alte Dosenfabrik: 7 professionelle Studios für Tanz, Circus, Yoga, Aerial Arts und Therapie in Hamburg. Kurse für alle Altersgruppen. Jetzt Probestunde buchen!',
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content={description}>
+    <meta name="keywords" content="Tanzstudio Hamburg, Circus Hamburg, Yoga Hamburg, Aerial Arts, Breakdance, Hip-Hop, Kindertanz, Bewegungstherapie, Alte Dosenfabrik">
+    <meta name="author" content="Bewegungswelten Alte Dosenfabrik">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="de">
+    <meta name="geo.region" content="DE-HH">
+    <meta name="geo.placename" content="Hamburg">
+    <meta name="geo.position" content="53.5511;9.9937">
+    <meta name="ICBM" content="53.5511, 9.9937">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bewegungswelten-hamburg.de/">
+    <meta property="og:title" content="Bewegungswelten Alte Dosenfabrik - Kreative Studios in Hamburg">
+    <meta property="og:description" content="7 professionelle Studios für Tanz, Circus, Yoga und mehr. Kurse für alle Altersgruppen in Hamburg. Jetzt Probestunde buchen!">
+    <meta property="og:image" content="https://bewegungswelten-hamburg.de/logo.png">
+    <meta property="og:site_name" content="Bewegungswelten Alte Dosenfabrik">
+    <meta property="og:locale" content="de_DE">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bewegungswelten-hamburg.de/">
+    <meta property="twitter:title" content="Bewegungswelten - Kreative Studios Hamburg">
+    <meta property="twitter:description" content="7 Studios für Tanz, Circus, Yoga & Aerial Arts in Hamburg. Professionelle Kurse für alle Altersgruppen.">
+    <meta property="twitter:image" content="https://bewegungswelten-hamburg.de/logo.png">
+
+    <!-- Business Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Bewegungswelten Alte Dosenfabrik",
+      "image": "https://bewegungswelten-hamburg.de/logo.png",
+      "@id": "https://bewegungswelten-hamburg.de/",
+      "url": "https://bewegungswelten-hamburg.de/",
+      "telephone": "+4940850540",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Stresemannstraße 374 b",
+        "addressLocality": "Hamburg",
+        "postalCode": "22761",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.5511,
+        "longitude": 9.9937
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00",
+          "closes": "18:00"
+        }
+      ],
+      "priceRange": "€€",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127"
+      }
+    })}></script>
+
+    <!-- Performance Optimization -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo.png">
+
+    <!-- Custom CSS -->
+    <style is:global>
+      @import '../styles/global.css';
+    </style>
+</head>
+<body>
+    <slot />
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navToggle?.addEventListener('click', () => {
+            navMenu?.classList.toggle('active');
+            navToggle?.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu?.classList.remove('active');
+                navToggle?.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (href) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // Scroll animations
+        function animateOnScroll() {
+            const animatedElements = document.querySelectorAll(
+                '.studio-card, .section-title, .event-card, .teacher-card, .about-item, .testimonial-card, .trust-item, .faq-category, .accordion-item, .findus-wrapper, .host-event-intro, .event-form, .cafe-copy, .cafe-photo'
+            );
+            animatedElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight * 0.8 && rect.bottom > 0;
+                if (isVisible) {
+                    element.classList.add('animate-in');
+                }
+            });
+        }
+
+        // Navigation hover effects
+        function initAdvancedInteractions() {
+            const navLinksHover = document.querySelectorAll('.nav-link');
+            navLinksHover.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    (link as HTMLElement).style.transform = 'translateY(-2px)';
+                });
+                link.addEventListener('mouseleave', () => {
+                    (link as HTMLElement).style.transform = 'translateY(0)';
+                });
+            });
+
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    (button as HTMLElement).style.transform = 'translateY(-3px) scale(1.02)';
+                });
+                button.addEventListener('mouseleave', () => {
+                    (button as HTMLElement).style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        }
+
+        // Active nav state on scroll
+        function initNavigationStates() {
+            const allNavLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+
+            function updateActiveNavigation() {
+                let currentSection = '';
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= 100 && rect.bottom >= 100) {
+                        currentSection = section.getAttribute('id') || '';
+                    }
+                });
+                allNavLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('href');
+                    if (href === `#${currentSection}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveNavigation, { passive: true });
+            updateActiveNavigation();
+        }
+
+        // Testimonials carousel
+        function initTestimonialsCarousel() {
+            const track = document.querySelector('.testimonials-track') as HTMLElement | null;
+            const dots = document.querySelectorAll('.nav-dot');
+            let currentSlide = 0;
+            let isTransitioning = false;
+
+            if (!track || dots.length === 0) return;
+
+            function updateCarousel() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                const slideWidth = track!.parentElement!.offsetWidth;
+                track!.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+                setTimeout(() => { isTransitioning = false; }, 400);
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    if (!isTransitioning) {
+                        currentSlide = index;
+                        updateCarousel();
+                    }
+                });
+            });
+
+            function startAutoAdvance() {
+                return setInterval(() => {
+                    if (!isTransitioning) {
+                        currentSlide = (currentSlide + 1) % dots.length;
+                        updateCarousel();
+                    }
+                }, 6000);
+            }
+            let autoAdvance = startAutoAdvance();
+
+            track.parentElement?.addEventListener('mouseenter', () => {
+                clearInterval(autoAdvance);
+            });
+            track.parentElement?.addEventListener('mouseleave', () => {
+                clearInterval(autoAdvance);
+                autoAdvance = startAutoAdvance();
+            });
+
+            let resizeTimeout: ReturnType<typeof setTimeout>;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => { updateCarousel(); }, 250);
+            });
+
+            updateCarousel();
+        }
+
+        // Hero video
+        function initHeroVideo() {
+            const video = document.querySelector('.hero-bg-video') as HTMLVideoElement | null;
+            if (!video) return;
+
+            video.addEventListener('canplay', () => {
+                video.play().catch(() => {});
+            });
+
+            setTimeout(() => {
+                if (video.paused) {
+                    if (window.innerWidth < 768) {
+                        video.style.filter = 'brightness(1.1) contrast(1.1)';
+                    }
+                    video.play().catch(() => {});
+                }
+            }, 1000);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initHeroVideo();
+            initAdvancedInteractions();
+            initNavigationStates();
+            initTestimonialsCarousel();
+            animateOnScroll();
+            window.addEventListener('scroll', animateOnScroll, { passive: true });
+        });
+    </script>
+</body>
+</html>

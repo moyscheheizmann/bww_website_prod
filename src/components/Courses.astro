@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+
+const courses = (await getCollection('courses')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<section class="studios bg-beige" id="courses">
+    <div class="container">
+        <h2 class="section-title text-raisin">Kurse</h2>
+        <div class="studios-grid">
+            {courses.map((course) => {
+                const d = course.data;
+                const mainLink = d.website || d.instagram || (d.email ? `mailto:${d.email}` : '#');
+                return (
+                    <div class="studio-card">
+                        <div class="studio-image-wrapper">
+                            <img src={d.image} alt={d.name} class="studio-image" loading="lazy">
+                            <div class="studio-overlay">
+                                <div class="studio-icon">
+                                    <i class={d.icon}></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="studio-content">
+                            <h3 class="studio-name">{d.name}</h3>
+                            <img src={d.logo} alt={`${d.name} Logo`} style="width: 100%; max-width: 200px; height: auto; margin: 10px 0;" loading="lazy">
+                            <p class="studio-description">{d.description}</p>
+                            <p class="studio-features">{d.features}</p>
+                            {d.photoCredit && (
+                                <p style="font-size: 0.85em; color: #666; margin-top: 5px;">{d.photoCredit}</p>
+                            )}
+                            <div class="contact-info" style="font-size: 0.9em; color: #666; margin: 15px 0;">
+                                {d.website && (
+                                    <p><i class="fas fa-globe"></i> <a href={d.website} target="_blank" style="color: #666;">{d.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</a></p>
+                                )}
+                                {d.email && (
+                                    <p><i class="fas fa-envelope"></i> <a href={`mailto:${d.email}`} style="color: #666;">{d.email}</a></p>
+                                )}
+                                {d.phone && (
+                                    <p><i class="fas fa-phone"></i> <a href={`tel:${d.phone.replace(/\s/g, '')}`} style="color: #666;">{d.phone}</a></p>
+                                )}
+                                {d.instagram && (
+                                    <p><i class="fab fa-instagram"></i> <a href={d.instagram} target="_blank" style="color: #666;">@{d.instagram.split('/').pop()}</a></p>
+                                )}
+                            </div>
+                            <a href={mainLink} target={mainLink.startsWith('mailto:') ? undefined : '_blank'} class="btn btn-outline-raisin">Mehr erfahren</a>
+                        </div>
+                    </div>
+                );
+            })}
+        </div>
+    </div>
+</section>

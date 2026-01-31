@@ -1,0 +1,78 @@
+---
+import siteData from '../content/site/general.json';
+const { hostEvent } = siteData;
+---
+
+<section class="host-event bg-beige" id="host-event">
+    <div class="container">
+        <h2 class="section-title text-raisin">{hostEvent.title}</h2>
+        <div class="host-event-content">
+            <div class="host-event-intro">
+                <h3>{hostEvent.subtitle}</h3>
+                <p>{hostEvent.description}</p>
+                <ul class="host-event-features">
+                    {hostEvent.features.map((feature) => (
+                        <li><i class="fas fa-check text-teal"></i> {feature}</li>
+                    ))}
+                </ul>
+                <div class="host-event-badges">
+                    {hostEvent.badges.map((badge) => (
+                        <span class="badge"><i class={badge.icon}></i> {badge.text}</span>
+                    ))}
+                </div>
+                <div class="host-event-ctas">
+                    <a href="#event-request" class="btn btn-apricot">Angebot anfordern</a>
+                    <a href="tel:+4940850540" class="btn btn-outline-raisin"><i class="fas fa-phone"></i> (040) 850 54 40</a>
+                </div>
+            </div>
+            <div class="event-form bg-white" id="event-request">
+                <h3>Eventanfrage</h3>
+                <form name="event-inquiry" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="event-inquiry">
+                    <div class="form-row">
+                        <input type="text" name="name" class="form-input" placeholder="Ihr Name" required>
+                        <input type="email" name="email" class="form-input" placeholder="E-Mail" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" name="phone" class="form-input" placeholder="Telefon (optional)">
+                        <input type="number" name="guests" class="form-input" placeholder="Gästezahl" min="1">
+                    </div>
+                    <div class="form-row">
+                        <select name="event-type" class="form-input" aria-label="Art der Veranstaltung">
+                            <option value="" selected>Art der Veranstaltung</option>
+                            <option>Hochzeit</option>
+                            <option>Geburtstag</option>
+                            <option>Konferenz / Meeting</option>
+                            <option>Firmenevent / Teambuilding</option>
+                            <option>Show / Aufführung</option>
+                            <option>Andere</option>
+                        </select>
+                        <input type="date" name="date" class="form-input" aria-label="Datum">
+                    </div>
+                    <div class="form-row">
+                        <select name="studio" class="form-input" aria-label="Studiopräferenz">
+                            <option value="" selected>Studiopräferenz (optional)</option>
+                            <option>Studio 1</option>
+                            <option>Studio 2</option>
+                            <option>Studio 3</option>
+                            <option>Studio 4</option>
+                            <option>Studio 5</option>
+                            <option>Studio 6</option>
+                            <option>Unentschlossen / Beratung gewünscht</option>
+                        </select>
+                        <select name="budget" class="form-input" aria-label="Budgetrahmen">
+                            <option value="" selected>Budgetrahmen (optional)</option>
+                            <option>bis 1.000 €</option>
+                            <option>1.000 – 3.000 €</option>
+                            <option>3.000 – 7.000 €</option>
+                            <option>über 7.000 €</option>
+                        </select>
+                    </div>
+                    <textarea name="message" class="form-input" rows="5" placeholder="Kurzbeschreibung & Wünsche (z. B. Technik, Catering, Bestuhlung)"></textarea>
+                    <button type="submit" class="btn btn-teal">Anfrage senden</button>
+                    <p class="form-hint">Wir melden uns innerhalb von 24 Stunden mit einem unverbindlichen Erstangebot.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
