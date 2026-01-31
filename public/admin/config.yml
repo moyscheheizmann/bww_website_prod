@@ -1,0 +1,141 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "courses"
+    label: "Kurse"
+    folder: "src/content/courses"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "Icon (Font Awesome Klasse)", name: "icon", widget: "string", default: "fas fa-music" }
+      - { label: "Beschreibung", name: "description", widget: "text" }
+      - { label: "Features", name: "features", widget: "string" }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "E-Mail", name: "email", widget: "string", required: false }
+      - { label: "Telefon", name: "phone", widget: "string", required: false }
+      - { label: "Instagram", name: "instagram", widget: "string", required: false }
+      - { label: "Foto-Credit", name: "photoCredit", widget: "string", required: false }
+      - { label: "Reihenfolge", name: "order", widget: "number", value_type: "int" }
+
+  - name: "studios"
+    label: "Studios"
+    folder: "src/content/studios"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Beschreibung", name: "description", widget: "text" }
+      - { label: "Reihenfolge", name: "order", widget: "number", value_type: "int" }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "src/content/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Text", name: "text", widget: "text" }
+      - { label: "Name", name: "authorName", widget: "string" }
+      - { label: "Rolle", name: "authorRole", widget: "string" }
+      - { label: "Avatar", name: "avatar", widget: "image" }
+      - { label: "Sterne (1-5)", name: "stars", widget: "number", value_type: "int", min: 1, max: 5 }
+      - { label: "Reihenfolge", name: "order", widget: "number", value_type: "int" }
+
+  - name: "site"
+    label: "Website-Einstellungen"
+    files:
+      - label: "Allgemein"
+        name: "general"
+        file: "src/content/site/general.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Untertitel", name: "subtitle", widget: "string" }
+              - { label: "Video", name: "video", widget: "file" }
+              - { label: "CTA Primär", name: "ctaPrimary", widget: "string" }
+              - { label: "CTA Sekundär", name: "ctaSecondary", widget: "string" }
+          - label: "GründerInnen"
+            name: "founders"
+            widget: "object"
+            fields:
+              - { label: "Bild", name: "image", widget: "image" }
+              - { label: "Text Absatz 1", name: "textParagraph1", widget: "text" }
+              - { label: "Text Absatz 2", name: "textParagraph2", widget: "text" }
+              - { label: "Abschlusszitat", name: "closingQuote", widget: "string" }
+          - label: "Empfangsbereich"
+            name: "cafe"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Untertitel", name: "subtitle", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "text" }
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
+              - label: "Bilder"
+                name: "images"
+                widget: "list"
+                field: { label: "Bild", name: "image", widget: "image" }
+          - label: "Über uns"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Bild", name: "image", widget: "image" }
+              - { label: "Leittext", name: "leadText", widget: "text" }
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Titel", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Kontakt"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Adresse", name: "address", widget: "text" }
+              - { label: "Telefon", name: "phone", widget: "string" }
+              - { label: "E-Mail", name: "email", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Copyright", name: "copyright", widget: "string" }
+          - label: "Vertrauensindikatoren"
+            name: "trustIndicators"
+            widget: "list"
+            fields:
+              - { label: "Zahl", name: "number", widget: "string" }
+              - { label: "Beschriftung", name: "label", widget: "string" }
+          - label: "Event-Bereich"
+            name: "hostEvent"
+            widget: "object"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Untertitel", name: "subtitle", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "text" }
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                field: { label: "Feature", name: "feature", widget: "string" }
+              - label: "Badges"
+                name: "badges"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Text", name: "text", widget: "string" }
