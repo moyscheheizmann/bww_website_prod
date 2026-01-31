@@ -16,6 +16,11 @@ const {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
+    <script is:inline>
+      if (window.location.hash.match(/#(invite|recovery|confirmation)_token=/)) {
+        window.location.href = '/admin/' + window.location.hash;
+      }
+    </script>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content={description}>
