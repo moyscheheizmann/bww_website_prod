@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "title": "Ein Ort voller Bewegung",
+    "subtitle": "Sieben Studios. Ein kreativer Ort. Gemeinschaft. Bewegung. Hamburg.",
+    "video": "/images/hero-video.mp4",
+    "ctaPrimary": "Studios ansehen",
+    "ctaSecondary": "Kurse ansehen"
+  },
+  "founders": {
+    "image": "/images/bw-founder.png",
+    "textParagraph1": "Wir sind die GründerInnen der Bewegungswelten Studios. Uns liegt es sehr am Herzen, Menschen einen Raum für die unterschiedlichsten Bewegungskünste zu geben. Deshalb sind wir stolz, ein so vielfältiges Angebot anbieten zu können – von Modern Dance bis Folklore, von Familien­aufstellungen bis Kindertanz und von Circus bis Yoga.",
+    "textParagraph2": "Veranstaltungen jeder Art, von Hochzeiten bis zu Body Rhythm Festivals, finden hier statt. Doch wir sind mehr als nur ein Ort der Bewegung – wir sind vor allem ein Ort der Begegnung.",
+    "closingQuote": "Wir sind für euch da – wir geben euch Raum!"
+  },
+  "cafe": {
+    "title": "Gemütlicher Empfangsbereich",
+    "subtitle": "Gemütlicher Treffpunkt im Haus",
+    "description": "Direkt in der Alten Dosenfabrik gelegen, bietet unser gemütlicher Empfangsbereich eine entspannte Atmosphäre vor und nach dem Training – ideal für Eltern, Teilnehmer*innen und Besucher.",
+    "features": [
+      { "icon": "fas fa-wifi", "text": "WLAN & Steckdosen" },
+      { "icon": "fas fa-users", "text": "Wartebereich für Eltern" },
+      { "icon": "fas fa-comments", "text": "Kommunikationsbereich" }
+    ],
+    "images": ["/images/cafe-1.png", "/images/cafe-2.png", "/images/cafe-3.png"]
+  },
+  "about": {
+    "image": "/images/bewegungswelten-building-exterior.jpg",
+    "leadText": "Bewegungswelten wurde 2010 von Tanzstudio Billie's und TriBühne gegründet und besteht aus 1.200 m² Veranstaltungsfläche mit professionellen Studios, Café und Eventräumen.",
+    "features": [
+      { "icon": "fas fa-home", "title": "Professionelle Räume", "text": "Großräume mit Spiegelwand, Schwingboden, Musikanlage, Umkleiden und Empfangsbereich. Perfekt für Kurse und Events." },
+      { "icon": "fas fa-users", "title": "Vielfältige Studios", "text": "Sieben kreative Studios unter einem Dach bieten Tanz, Circus, Fitness, Therapie und mehr für alle Altersgruppen." },
+      { "icon": "fas fa-calendar", "title": "Vermietung & Events", "text": "Unsere Räume sind vermietbar für Workshops, Kurse, Aufführungen und private Veranstaltungen." }
+    ]
+  },
+  "contact": {
+    "address": "Stresemannstraße 374 b\n22761 Hamburg",
+    "phone": "(040) 850 54 40",
+    "email": "info@billies.de"
+  },
+  "footer": {
+    "tagline": "Ein Ort voller Bewegung in der Alten Dosenfabrik Hamburg",
+    "copyright": "© 2024 Bewegungswelten Alte Dosenfabrik. Alle Rechte vorbehalten. | Datenschutzhinweis: Diese Website verwendet Cookies für ein optimales Nutzererlebnis."
+  },
+  "trustIndicators": [
+    { "number": "500+", "label": "Zufriedene Kursteilnehmer" },
+    { "number": "15+", "label": "Jahre Erfahrung" },
+    { "number": "7", "label": "Spezialisierte Studios" },
+    { "number": "20+", "label": "Qualifizierte Trainer" }
+  ],
+  "hostEvent": {
+    "title": "Eigene Veranstaltung planen",
+    "subtitle": "Eventplanung & Studiovermietung",
+    "description": "Unsere sieben professionell ausgestatteten Studios können für private und geschäftliche Anlässe gemietet werden. Auf Wunsch übernimmt unser erfahrenes Eventmanagement die komplette Planung und Durchführung – von der ersten Idee bis zur Umsetzung vor Ort.",
+    "features": [
+      "Hochzeiten & Jubiläen",
+      "Geburtstage & Familienfeiern",
+      "Konferenzen, Meetings & Produktpräsentationen",
+      "Firmenevents & Teambuildings"
+    ],
+    "badges": [
+      { "icon": "fas fa-building", "text": "7 Studios" },
+      { "icon": "fas fa-wifi", "text": "Technik & Ausstattung" },
+      { "icon": "fas fa-handshake", "text": "Empfangsbereich" },
+      { "icon": "fas fa-user-tie", "text": "Betreuung vor Ort" }
+    ]
+  }
+}
