@@ -7,5 +7,6 @@ description: "Trapez-Künstler*innen mit internationalen Auftritten. Bewegungsku
 features: "Trapez • Performancekunst • Artistik"
 website: "https://www.milenaandchristopher.com/"
 email: "info@milenaandchristopher.com"
+category: "circus-kindertanz"
 order: 3
 ---

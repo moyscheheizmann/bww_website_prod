@@ -1,0 +1,29 @@
+---
+import { getEntry } from 'astro:content';
+
+const general = await getEntry('site', 'general');
+const welcome = general?.data?.welcome;
+const aboutFeatures = general?.data?.about?.features;
+---
+
+<section class="welcome" id="welcome">
+    <div class="container">
+        <h2 class="section-title text-raisin">{welcome.title}</h2>
+        <div class="welcome-text">
+            <p>{welcome.paragraph1}</p>
+            <p>{welcome.paragraph2}</p>
+            <p class="welcome-closing">{welcome.paragraph3}</p>
+        </div>
+        {aboutFeatures && (
+            <div class="about-grid">
+                {aboutFeatures.map((item) => (
+                    <div class="about-item">
+                        <i class={`${item.icon} text-teal`}></i>
+                        <h3>{item.title}</h3>
+                        <p>{item.text}</p>
+                    </div>
+                ))}
+            </div>
+        )}
+    </div>
+</section>

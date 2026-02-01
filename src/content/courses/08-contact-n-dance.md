@@ -9,5 +9,6 @@ website: "https://www.melanienowak.de/contact-n-dance"
 email: "mail@melanienowak.de"
 phone: "+49 4192 3068-362"
 instagram: "https://instagram.com/melanie.nowak.dance"
+category: "modern-dance"
 order: 8
 ---

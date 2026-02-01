@@ -8,5 +8,6 @@ features: "Musical • Schauspiel • Tanz & Gesang"
 website: "https://www.stage-up.de/"
 email: "info@stage-up.de"
 phone: "040 897 20 888"
+category: "circus-kindertanz"
 order: 15
 ---

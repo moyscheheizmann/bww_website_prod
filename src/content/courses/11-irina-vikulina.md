@@ -6,5 +6,6 @@ icon: "fas fa-om"
 description: "Verbindung von Tanz, Yoga und Bewegungskunst. Einzigartige Kombination aus Technik und Kreativität."
 features: "Yoga • Tanz • Engineering"
 website: "https://www.irinavikulina.de/"
+category: "yoga-wellness"
 order: 11
 ---

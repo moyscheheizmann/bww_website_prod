@@ -7,5 +7,6 @@ description: '„Dance of Life Process" – ein wöchentlicher Tanzraum für Leb
 features: "Biodanza • Lebensfreude • Gruppentanz"
 website: "https://www.biodanza-dienstagsgruppe.de/"
 email: "biodanza-dienstagsgruppe@mail.de"
+category: "yoga-wellness"
 order: 6
 ---

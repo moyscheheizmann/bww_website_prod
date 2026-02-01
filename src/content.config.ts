@@ -20,6 +20,7 @@ const courses = defineCollection({
     phone: z.string().optional(),
     instagram: z.string().optional(),
     photoCredit: z.string().optional(),
+    category: z.string(),
     order: z.number(),
   }),
 });

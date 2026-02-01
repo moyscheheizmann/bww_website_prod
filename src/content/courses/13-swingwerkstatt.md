@@ -7,5 +7,6 @@ description: 'Swingtanz in Hamburg – Lindy Hop, Authentic Jazz, Kurse und Part
 features: "Swing • Lindy Hop • Authentic Jazz"
 website: "https://www.swingwerkstatt.de/"
 instagram: "https://instagram.com/swingwerkstatt"
+category: "folklore-swing"
 order: 13
 ---

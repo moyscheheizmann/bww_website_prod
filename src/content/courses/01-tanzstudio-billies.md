@@ -7,5 +7,6 @@ description: "Tanzkurse für jede Altersklasse – vom kreativen Kindertanz übe
 features: "Kostenlose Probestunde • Professionelle Ausstattung • Studiovermietung"
 website: "https://www.billies.de/"
 email: "info@billie.de"
+category: "circus-kindertanz"
 order: 1
 ---

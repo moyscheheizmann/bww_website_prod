@@ -1,7 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
+import siteData from '../content/site/general.json';
 
 const studios = (await getCollection('studios')).sort((a, b) => a.data.order - b.data.order);
+const { cafe } = siteData;
 ---
 
 <section class="studios-carousel bg-beige" id="studios">
@@ -13,17 +15,38 @@ const studios = (await getCollection('studios')).sort((a, b) => a.data.order - b
                 return (
                     <div class="studio-slide">
                         <div class="studio-slide-image">
-                            <img src={d.image} alt={d.name} loading="lazy">
+                            <img src={d.image} alt={d.name} loading="lazy" data-studio-name={d.name}>
+                            <div class="studio-slide-zoom-hint">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
                         </div>
                         <div class="studio-slide-content">
                             <h3>{d.name}</h3>
                             <p class="studio-description">{d.description}</p>
-                            <a href="#" class="btn btn-outline-raisin">Mehr erfahren</a>
                             <img src="/images/custom-logo.png" alt="Bewegungswelten Logo" class="studio-header-logo" style="width: 50px; height: auto; margin-top: 10px; opacity: 0.7;" loading="eager">
                         </div>
                     </div>
                 );
             })}
+            <div class="studio-slide">
+                <div class="studio-slide-image">
+                    <img src={cafe.images[0]} alt="Empfangsbereich" loading="lazy" data-studio-name="Empfangsbereich">
+                    <div class="studio-slide-zoom-hint">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="studio-slide-content">
+                    <h3>{cafe.subtitle}</h3>
+                    <p class="studio-description">{cafe.description}</p>
+                    <img src="/images/custom-logo.png" alt="Bewegungswelten Logo" class="studio-header-logo" style="width: 50px; height: auto; margin-top: 10px; opacity: 0.7;" loading="eager">
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<div id="studio-lightbox" class="studio-lightbox">
+    <button class="studio-lightbox-close" aria-label="Schließen">&times;</button>
+    <img class="studio-lightbox-img" src="" alt="">
+    <div class="studio-lightbox-caption"></div>
+</div>

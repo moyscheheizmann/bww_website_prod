@@ -1,4 +1,10 @@
 {
+  "welcome": {
+    "title": "Willkommen in unseren Räumen",
+    "paragraph1": "Uns liegt es sehr am Herzen, Menschen einen Raum für die unterschiedlichsten Bewegungskünste zu geben. Deshalb sind wir glücklich, ein so vielfältiges Angebot anbieten zu können – von Modern Dance bis Folklore, von Familien\u00ADaufstellungen bis Kindertanz und von Circus bis Yoga.",
+    "paragraph2": "Veranstaltungen jeder Art, von Hochzeiten bis zu Body Rhythm Festivals, finden hier statt. Doch wir sind mehr als nur ein Ort der Bewegung – wir sind vor allem ein Ort der Begegnung.",
+    "paragraph3": "Wir sind für euch da – wir geben euch Raum!"
+  },
   "hero": {
     "title": "Ein Ort voller Bewegung",
     "subtitle": "Sieben Studios. Ein kreativer Ort. Gemeinschaft. Bewegung. Hamburg.",
@@ -7,7 +13,7 @@
     "ctaSecondary": "Kurse ansehen"
   },
   "founders": {
-    "image": "/images/bw-founder.png",
+    "image": "/images/bw-founder.jpg",
     "textParagraph1": "Wir sind die GründerInnen der Bewegungswelten Studios. Uns liegt es sehr am Herzen, Menschen einen Raum für die unterschiedlichsten Bewegungskünste zu geben. Deshalb sind wir stolz, ein so vielfältiges Angebot anbieten zu können – von Modern Dance bis Folklore, von Familien­aufstellungen bis Kindertanz und von Circus bis Yoga.",
     "textParagraph2": "Veranstaltungen jeder Art, von Hochzeiten bis zu Body Rhythm Festivals, finden hier statt. Doch wir sind mehr als nur ein Ort der Bewegung – wir sind vor allem ein Ort der Begegnung.",
     "closingQuote": "Wir sind für euch da – wir geben euch Raum!"
@@ -15,13 +21,14 @@
   "cafe": {
     "title": "Gemütlicher Empfangsbereich",
     "subtitle": "Gemütlicher Treffpunkt im Haus",
-    "description": "Direkt in der Alten Dosenfabrik gelegen, bietet unser gemütlicher Empfangsbereich eine entspannte Atmosphäre vor und nach dem Training – ideal für Eltern, Teilnehmer*innen und Besucher.",
+    "description": "Unser gemütlicher Empfangsbereich bietet eine entspannte Atmosphäre vor und nach dem Training – ideal für Eltern, Teilnehmer*Innen und Besucher.",
     "features": [
       { "icon": "fas fa-wifi", "text": "WLAN & Steckdosen" },
       { "icon": "fas fa-users", "text": "Wartebereich für Eltern" },
-      { "icon": "fas fa-comments", "text": "Kommunikationsbereich" }
+      { "icon": "fas fa-comments", "text": "Kommunikationsbereich" },
+      { "icon": "fas fa-mug-hot", "text": "Professionelle Espressomaschine" }
     ],
-    "images": ["/images/cafe-1.png", "/images/cafe-2.png", "/images/cafe-3.png"]
+    "images": ["/images/foyer.jpg", "/images/cafe-1.png", "/images/cafe-2.png"]
   },
   "about": {
     "image": "/images/bewegungswelten-building-exterior.jpg",

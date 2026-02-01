@@ -6,5 +6,6 @@ icon: "fas fa-running"
 description: "Moderner Tanz voller Ausdruck, Energie und fließender Bewegungen – offen für alle, die Neues ausprobieren wollen."
 features: "Modern Dance • Ausdruckstanz • Kreativität"
 email: "franziska@cdsh.de"
+category: "modern-dance"
 order: 12
 ---

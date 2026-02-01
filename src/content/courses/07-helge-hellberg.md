@@ -7,5 +7,6 @@ description: "Executive Coach mit Fokus auf Bewusstsein, Leadership und nachhalt
 features: "Coaching • Leadership • Persönlichkeitsentwicklung"
 website: "https://www.helgehellberg.com/"
 photoCredit: "Foto: Grit Siwonia"
+category: "coaching-leadership"
 order: 7
 ---

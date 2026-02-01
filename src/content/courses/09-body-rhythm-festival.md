@@ -7,5 +7,6 @@ description: "Ein Festival für Body Percussion, Circle Singing und Bewegung –
 features: "Body Percussion • Circle Singing • Festival"
 website: "https://www.festival.bodyrhythm.de/"
 instagram: "https://instagram.com/body.rhythm.hamburg"
+category: "festivals-events"
 order: 9
 ---

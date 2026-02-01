@@ -7,5 +7,6 @@ description: "Authentisches Jazz Dance Festival in Hamburg. Workshops, Socials u
 features: "Jazz Dance • Lindy Hop • Festival"
 website: "https://www.jumpupnorth.com/"
 instagram: "https://instagram.com/jump_up_north"
+category: "festivals-events"
 order: 5
 ---

@@ -9,5 +9,6 @@ website: "https://www.ullisievers.de/"
 email: "ullisievers@gmail.com"
 phone: "0177 795 3021"
 photoCredit: "Photograph provided by Nia Technique, Inc."
+category: "yoga-wellness"
 order: 4
 ---
