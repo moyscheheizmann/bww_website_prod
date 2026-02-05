@@ -4,6 +4,11 @@ import { getCollection } from 'astro:content';
 const courses = (await getCollection('courses')).sort((a, b) => a.data.order - b.data.order);
 
 const categoryMeta: Record<string, { label: string; icon: string; banner: string }> = {
+    'jazz': {
+        label: 'Jazz',
+        icon: 'fas fa-star',
+        banner: '/images/saba-peduk.jpg',
+    },
     'circus-kindertanz': {
         label: 'Circus & Kindertanz',
         icon: 'fas fa-hat-wizard',
@@ -39,6 +44,7 @@ const categoryMeta: Record<string, { label: string; icon: string; banner: string
 const categoryOrder = [
     'circus-kindertanz',
     'modern-dance',
+    'jazz',
     'yoga-wellness',
     'coaching-leadership',
     'festivals-events',
