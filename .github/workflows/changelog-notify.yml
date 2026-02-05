@@ -1,0 +1,48 @@
+name: Changelog Notification
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'CHANGELOG.md'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get changelog diff
+        id: changelog
+        run: |
+          # Get the new content added to CHANGELOG.md
+          DIFF=$(git diff HEAD~1 HEAD -- CHANGELOG.md | grep '^+' | grep -v '^+++' | sed 's/^+//' || echo "")
+          if [ -z "$DIFF" ]; then
+            echo "No new changelog entries"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            # Save to file to preserve newlines
+            echo "$DIFF" > /tmp/changelog_diff.txt
+          fi
+
+      - name: Send email notification
+        if: steps.changelog.outputs.has_changes == 'true'
+        run: |
+          CHANGELOG_CONTENT=$(cat /tmp/changelog_diff.txt)
+
+          curl -X POST 'https://api.resend.com/emails' \
+            -H 'Authorization: Bearer ${{ secrets.RESEND_API_KEY }}' \
+            -H 'Content-Type: application/json' \
+            -d @- << EOF
+          {
+            "from": "Bewegungswelten <onboarding@resend.dev>",
+            "to": ["victor.staack@proton.me"],
+            "subject": "Bewegungswelten Website Update",
+            "html": "<h2>Website Update</h2><p>The Bewegungswelten website has been updated:</p><pre>${CHANGELOG_CONTENT}</pre><p><a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>View commit</a></p>"
+          }
+          EOF
