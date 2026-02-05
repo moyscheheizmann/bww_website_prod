@@ -1,9 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import siteData from '../content/site/general.json';
 
 const testimonials = (await getCollection('testimonials')).sort((a, b) => a.data.order - b.data.order);
-const { trustIndicators } = siteData;
 ---
 
 <section class="testimonials" id="testimonials">
@@ -44,13 +42,5 @@ const { trustIndicators } = siteData;
             </div>
         </div>
 
-        <div class="trust-indicators">
-            {trustIndicators.map((item) => (
-                <div class="trust-item">
-                    <div class="trust-number">{item.number}</div>
-                    <div class="trust-label">{item.label}</div>
-                </div>
-            ))}
-        </div>
     </div>
 </section>

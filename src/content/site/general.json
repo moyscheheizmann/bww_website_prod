@@ -48,12 +48,6 @@
     "tagline": "Ein Ort voller Bewegung in der Alten Dosenfabrik Hamburg",
     "copyright": "© 2024 Bewegungswelten Alte Dosenfabrik. Alle Rechte vorbehalten. | Datenschutzhinweis: Diese Website verwendet Cookies für ein optimales Nutzererlebnis."
   },
-  "trustIndicators": [
-    { "number": "500+", "label": "Zufriedene Kursteilnehmer" },
-    { "number": "15+", "label": "Jahre Erfahrung" },
-    { "number": "7", "label": "Spezialisierte Studios" },
-    { "number": "20+", "label": "Qualifizierte Trainer" }
-  ],
   "hostEvent": {
     "title": "Eigene Veranstaltung planen",
     "subtitle": "Eventplanung & Studiovermietung",
