@@ -5,6 +5,7 @@ All notable changes to the Bewegungswelten website will be documented in this fi
 ## [Unreleased]
 
 ### Added
+- Changelog email notification system
 - Saba Pedük added to "Unsere Mieter" with new Jazz category
 - New testimonials from Saba Pedük and Leo Lazar
 
