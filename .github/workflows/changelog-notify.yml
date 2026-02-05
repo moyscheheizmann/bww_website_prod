@@ -41,7 +41,7 @@ jobs:
             -d @- << EOF
           {
             "from": "Bewegungswelten <onboarding@resend.dev>",
-            "to": ["victor.staack@proton.me"],
+            "to": ["moysche_heizmann@proton.me"],
             "subject": "Bewegungswelten Website Update",
             "html": "<h2>Website Update</h2><p>The Bewegungswelten website has been updated:</p><pre>${CHANGELOG_CONTENT}</pre><p><a href='https://github.com/${{ github.repository }}/commit/${{ github.sha }}'>View commit</a></p>"
           }
