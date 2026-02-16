@@ -32,11 +32,11 @@
   },
   "about": {
     "image": "/images/bewegungswelten-building-exterior.jpg",
-    "leadText": "Bewegungswelten wurde 2010 von Tanzstudio Billie's und TriBühne gegründet und besteht aus 1.200 m² Veranstaltungsfläche mit professionellen Studios, Café und Eventräumen.",
+    "leadText": "Bewegungswelten wurde 2010 gegründet von Billie Ukena, Leiterin vom Tanzstudio Billie`s und Harms Haddorp und Holger de Vries, Leiter der Circusschule TriBühne. Es besteht aus 1.200 m² Veranstaltungsfläche mit professionellen Studios, Empfangs -und Eventräumen.",
     "features": [
       { "icon": "fas fa-home", "title": "Professionelle Räume", "text": "Großräume mit Spiegelwand, Schwingboden, Musikanlage, Umkleiden und Empfangsbereich. Perfekt für Kurse und Events." },
       { "icon": "fas fa-users", "title": "Vielfältige Studios", "text": "Sieben kreative Studios unter einem Dach bieten Tanz, Circus, Fitness, Therapie und mehr für alle Altersgruppen." },
-      { "icon": "fas fa-calendar", "title": "Vermietung & Events", "text": "Unsere Räume sind vermietbar für Workshops, Kurse, Aufführungen und private Veranstaltungen." }
+      { "icon": "fas fa-calendar", "title": "Vermietung & Events", "text": "Unsere Räume sind mietbar für Workshops, Kurse, Aufführungen und private Veranstaltungen." }
     ]
   },
   "contact": {
