@@ -595,6 +595,26 @@ section {
   object-fit: cover;
 }
 
+.category-banner-img--blurred {
+  filter: blur(6px);
+  transform: scale(1.05);
+}
+
+.course-single-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .course-single-card {
+    grid-template-columns: 1fr;
+  }
+}
+
 .category-banner-overlay {
   position: absolute;
   top: 0;
