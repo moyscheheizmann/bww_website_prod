@@ -394,6 +394,36 @@ a {
   opacity: 0.95;
 }
 
+.hero-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.95;
+  margin-bottom: var(--spacing-md);
+  animation: fadeInUp 1s ease;
+  text-shadow: 2px 4px 16px rgba(0, 0, 0, 0.5);
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 700;
+  color: var(--color-light);
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
+}
+
+.hero-logo-line1 {
+  font-size: clamp(4rem, 13vw, 11rem);
+}
+
+.hero-logo-line2 {
+  font-size: clamp(2.5rem, 9vw, 7.5rem);
+  margin-top: 0.4em;
+}
+
+.hero-logo-line3 {
+  font-size: clamp(1.8rem, 5.5vw, 4.5rem);
+  letter-spacing: 0.3em;
+  opacity: 0.85;
+}
+
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
