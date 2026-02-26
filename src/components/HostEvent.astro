@@ -27,7 +27,10 @@ const { hostEvent } = siteData;
             </div>
             <div class="event-form bg-white" id="event-request">
                 <h3>Eventanfrage</h3>
-                <form name="event-inquiry" method="POST" data-netlify="true">
+                <div class="form-success" id="form-success" style="display:none; padding: 1rem; background: #e6f4ea; border-radius: 8px; color: #2e7d32; margin-bottom: 1rem;">
+                    <i class="fas fa-check-circle"></i> Vielen Dank! Wir melden uns innerhalb von 24 Stunden.
+                </div>
+                <form name="event-inquiry" method="POST" data-netlify="true" action="/?submitted=true#event-request">
                     <input type="hidden" name="form-name" value="event-inquiry">
                     <div class="form-row">
                         <input type="text" name="name" class="form-input" placeholder="Ihr Name" required>
@@ -75,4 +78,10 @@ const { hostEvent } = siteData;
             </div>
         </div>
     </div>
+<script>
+    if (window.location.search.includes('submitted=true')) {
+        const msg = document.getElementById('form-success');
+        if (msg) msg.style.display = 'block';
+    }
+</script>
 </section>
