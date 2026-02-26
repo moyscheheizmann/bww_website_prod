@@ -1699,6 +1699,84 @@ section {
   background-color: var(--color-beige);
 }
 
+/* ===========================================================================
+   Weddings
+   ========================================================================== */
+
+.weddings-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: stretch;
+}
+
+.weddings-images {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-height: 600px;
+}
+
+.wedding-img {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+  min-height: 0;
+}
+
+.weddings-text p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.7;
+}
+
+.weddings-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+}
+
+.weddings-feature-group h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.weddings-feature-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weddings-feature-group ul li {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weddings-feature-group ul li i {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.weddings-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: var(--spacing-md) 0;
+}
+
+@media (max-width: 768px) {
+  .weddings-content {
+    grid-template-columns: 1fr;
+  }
+}
+
 .host-event-content {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
