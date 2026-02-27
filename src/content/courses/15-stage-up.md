@@ -1,6 +1,6 @@
 ---
 name: "Stage UP! Musicalschule"
-image: "/images/stage-up-logo.jpg"
+image: "/images/stage-up-card.jpg"
 logo: "/images/stage-up-logo.jpg"
 icon: "fas fa-theater-masks"
 description: "Schauspiel, Tanz und Gesang für Kinder und Jugendliche – die Musicalschule in der Dosenfabrik."

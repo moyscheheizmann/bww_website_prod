@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 
-const courses = (await getCollection('courses')).sort((a, b) => a.data.order - b.data.order);
+const courses = (await getCollection('courses')).sort((a, b) => a.data.name.localeCompare(b.data.name, 'de'));
 ---
 
 <section class="studios bg-beige" id="courses">
@@ -43,7 +43,9 @@ const courses = (await getCollection('courses')).sort((a, b) => a.data.order - b
                             </div>
                             <div class="studio-content">
                                 <h3 class="studio-name">{d.name}</h3>
-                                <img src={d.logo} alt={`${d.name} Logo`} style="width: 100%; max-width: 200px; height: auto; margin: 10px 0;" loading="lazy" />
+                                {d.logo && (
+                                    <img src={d.logo} alt={`${d.name} Logo`} style="width: 100%; max-width: 200px; height: auto; margin: 10px 0;" loading="lazy" />
+                                )}
                                 <p class="studio-description">{d.description}</p>
                                 <p class="studio-features">{d.features}</p>
                                 {d.photoCredit && (
