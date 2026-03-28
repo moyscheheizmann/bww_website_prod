@@ -28,7 +28,7 @@
       { "icon": "fas fa-comments", "text": "Kommunikationsbereich" },
       { "icon": "fas fa-mug-hot", "text": "Professionelle Espressomaschine" }
     ],
-    "images": ["/images/foyer.jpg", "/images/cafe-1.png", "/images/cafe-2.png"]
+    "images": ["/images/cafe-treffpunkt.jpg", "/images/cafe-1.png", "/images/cafe-2.png"]
   },
   "about": {
     "image": "/images/bewegungswelten-building-exterior.jpg",

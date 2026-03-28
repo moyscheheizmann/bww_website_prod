@@ -1,5 +1,5 @@
 ---
-name: "Irina Vikulina – Yoga Engineering"
+name: "Yoga Engineering – Irina Vikulina"
 image: "/images/irina-vikulina-portrait.png"
 logo: "/images/yoga-engineering.gif"
 icon: "fas fa-om"

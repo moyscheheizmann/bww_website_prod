@@ -1,5 +1,5 @@
 ---
-name: "Franziska Hoppe – Modern Dance"
+name: "Modern Dance – Franziska Hoppe"
 image: "/images/franziska-hoppe-card.jpg"
 logo: "/images/modern-dance-logo.png"
 icon: "fas fa-running"

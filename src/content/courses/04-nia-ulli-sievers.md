@@ -1,7 +1,7 @@
 ---
 name: "NIA / Ulli Sievers"
 image: "/images/nia-ulli-sievers.jpeg"
-logo: "/images/nia.jpg"
+logo: ""
 icon: "fas fa-spa"
 description: "Tanztherapie, Körperarbeit und NIA-Technik. Verbindung von Bewegung, Achtsamkeit und Lebensfreude."
 features: "NIA • Tanztherapie • Körperarbeit"

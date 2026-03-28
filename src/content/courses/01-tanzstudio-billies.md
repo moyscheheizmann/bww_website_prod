@@ -1,5 +1,5 @@
 ---
-name: "Tanzstudio Billie's"
+name: "Billie's"
 image: "/images/studio-billies-kids-dance-class.jpg"
 logo: "/images/billies.jpg"
 icon: "fas fa-music"

@@ -1,7 +1,7 @@
 ---
 name: "Milena & Christopher"
 image: "/images/milena-christopher-trapeze.jpg"
-logo: "/images/duo-trapeze.jpg"
+logo: ""
 icon: "fas fa-theater-masks"
 description: "Trapez-Künstler*innen mit internationalen Auftritten. Bewegungskunst zwischen Artistik und Ausdruck."
 features: "Trapez • Performancekunst • Artistik"

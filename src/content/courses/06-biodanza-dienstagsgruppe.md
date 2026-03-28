@@ -1,7 +1,7 @@
 ---
 name: "Biodanza Dienstagsgruppe"
 image: "/images/biodanza-dienstagsgruppe.jpg"
-logo: "/images/biodanza.jpg"
+logo: ""
 icon: "fas fa-heart"
 description: '„Dance of Life Process" – ein wöchentlicher Tanzraum für Lebendigkeit, Begegnung und Ausdruck.'
 features: "Biodanza • Lebensfreude • Gruppentanz"

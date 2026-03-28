@@ -1,7 +1,7 @@
 ---
 name: "Helge Hellberg"
 image: "/images/helge-hellberg-coach.jpg"
-logo: "/images/helge-hellberg.jpg"
+logo: "/images/helge-hellberg-logo.png"
 icon: "fas fa-user-tie"
 description: "Executive Coach mit Fokus auf Bewusstsein, Leadership und nachhaltige Transformation."
 features: "Coaching • Leadership • Persönlichkeitsentwicklung"

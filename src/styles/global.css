@@ -410,16 +410,16 @@ a {
 }
 
 .hero-logo-line1 {
-  font-size: clamp(4rem, 13vw, 11rem);
+  font-size: clamp(3rem, 8vw, 6rem);
 }
 
 .hero-logo-line2 {
-  font-size: clamp(2.5rem, 9vw, 7.5rem);
+  font-size: clamp(2rem, 5.5vw, 4.5rem);
   margin-top: 0.4em;
 }
 
 .hero-logo-line3 {
-  font-size: clamp(1.8rem, 5.5vw, 4.5rem);
+  font-size: clamp(1.4rem, 3.5vw, 2.8rem);
   letter-spacing: 0.3em;
   opacity: 0.85;
 }
@@ -464,6 +464,7 @@ a {
 .btn-apricot {
   background-color: var(--color-apricot);
   color: var(--color-white);
+  border: 2px solid var(--color-apricot);
   box-shadow: 0 4px 12px rgba(242, 140, 108, 0.3);
 }
 
@@ -1862,6 +1863,10 @@ section {
 .event-form .form-input,
 .event-form select {
   border: 2px solid var(--color-beige);
+  min-width: 0;
+  text-overflow: ellipsis;
+  padding-right: 2rem;
+  font-size: 0.85rem;
 }
 
 .form-hint {

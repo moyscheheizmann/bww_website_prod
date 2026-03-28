@@ -1,7 +1,7 @@
 ---
 name: "HoneyStepz"
 image: "/images/honeysteps-main.jpeg"
-logo: "/images/honeysteps.jpeg"
+logo: ""
 icon: "fas fa-heart"
 description: 'Heels Dance Classes in Hamburg – ein Raum für Selbstbewusstsein, Community und „Girls support Girls". Workshops und Kurse ab 18 Jahren.'
 features: "Heels · Community · Empowerment"
