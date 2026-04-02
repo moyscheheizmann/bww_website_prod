@@ -629,6 +629,13 @@ section {
   }
 }
 
+.mieter-divider {
+  border: none;
+  border-top: 2px solid var(--color-sage);
+  margin: var(--spacing-lg) 0;
+  opacity: 0.4;
+}
+
 .category-banner-overlay {
   position: absolute;
   top: 0;

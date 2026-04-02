@@ -1,14 +1,21 @@
 ---
 import { getCollection } from 'astro:content';
 
-const courses = (await getCollection('courses')).sort((a, b) => a.data.name.localeCompare(b.data.name, 'de'));
+const allCourses = (await getCollection('courses')).sort((a, b) => a.data.name.localeCompare(b.data.name, 'de'));
+const pinnedNames = ["Billie's", "TriBühne (Circusschule)", "CDSH – Contemporary Dance School Hamburg"];
+const pinned = pinnedNames.map(name => allCourses.find(c => c.data.name === name)).filter(Boolean);
+const rest = allCourses.filter(c => !pinnedNames.includes(c.data.name));
 ---
 
 <section class="studios bg-beige" id="courses">
     <div class="container">
         <h2 class="section-title text-raisin">Unsere Mieter</h2>
 
-        {courses.map((course) => {
+        {[...pinned, 'divider', ...rest].map((item) => {
+            if (item === 'divider') {
+                return <hr class="mieter-divider" />;
+            }
+            const course = item;
             const d = course.data;
             const mainLink = d.website || d.instagram || (d.email ? `mailto:${d.email}` : '#');
             return (
