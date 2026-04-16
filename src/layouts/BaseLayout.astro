@@ -338,7 +338,7 @@ const {
                 document.body.style.overflow = '';
             }
 
-            document.querySelectorAll('.studio-slide-image img').forEach(img => {
+            document.querySelectorAll('img[data-studio-name]').forEach(img => {
                 img.addEventListener('click', () => {
                     const src = (img as HTMLImageElement).src;
                     const name = (img as HTMLElement).dataset.studioName || '';

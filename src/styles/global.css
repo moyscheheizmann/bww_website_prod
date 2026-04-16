@@ -610,6 +610,20 @@ section {
   padding: var(--spacing-lg);
 }
 
+#studios .course-single-card {
+  grid-template-columns: 2fr 1fr;
+  max-width: 1400px;
+}
+
+#studios .studio-image {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#studios .studio-image:hover {
+  transform: scale(1.02);
+}
+
 .course-single-card .studio-image-wrapper {
   padding-top: 0;
   aspect-ratio: auto;
