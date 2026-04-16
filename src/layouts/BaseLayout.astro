@@ -296,16 +296,20 @@ const {
         function initCategoryAccordions() {
             const banners = document.querySelectorAll('.category-banner');
             banners.forEach(banner => {
+                const panel = banner.nextElementSibling as HTMLElement | null;
+                if (panel && banner.getAttribute('aria-expanded') === 'true') {
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                }
                 banner.addEventListener('click', () => {
                     const expanded = banner.getAttribute('aria-expanded') === 'true';
-                    const panel = banner.nextElementSibling as HTMLElement | null;
-                    if (!panel) return;
+                    const p = banner.nextElementSibling as HTMLElement | null;
+                    if (!p) return;
 
                     if (expanded) {
-                        panel.style.maxHeight = '0';
+                        p.style.maxHeight = '0';
                         banner.setAttribute('aria-expanded', 'false');
                     } else {
-                        panel.style.maxHeight = panel.scrollHeight + 'px';
+                        p.style.maxHeight = p.scrollHeight + 'px';
                         banner.setAttribute('aria-expanded', 'true');
                     }
                 });

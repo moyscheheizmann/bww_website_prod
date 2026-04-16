@@ -21,7 +21,7 @@ const { hostEvent } = siteData;
                     ))}
                 </div>
                 <div class="host-event-ctas">
-                    <a href="#event-request" class="btn btn-apricot">Angebot anfordern</a>
+                    <a href="#event-request" class="btn btn-apricot">Anfrage senden</a>
                     <a href="tel:+4940850540" class="btn btn-outline-raisin"><i class="fas fa-phone"></i> (040) 850 54 40</a>
                 </div>
             </div>
@@ -36,43 +36,8 @@ const { hostEvent } = siteData;
                         <input type="text" name="name" class="form-input" placeholder="Ihr Name" required>
                         <input type="email" name="email" class="form-input" placeholder="E-Mail" required>
                     </div>
-                    <div class="form-row">
-                        <input type="tel" name="phone" class="form-input" placeholder="Telefon (optional)">
-                        <input type="number" name="guests" class="form-input" placeholder="Gästezahl" min="1">
-                    </div>
-                    <div class="form-row">
-                        <select name="event-type" class="form-input" aria-label="Art der Veranstaltung">
-                            <option value="" selected>Anlass</option>
-                            <option>Hochzeit</option>
-                            <option>Geburtstag</option>
-                            <option>Konferenz / Meeting</option>
-                            <option>Firmenevent / Teambuilding</option>
-                            <option>Show / Aufführung</option>
-                            <option>Andere</option>
-                        </select>
-                        <input type="date" name="date" class="form-input" aria-label="Datum">
-                    </div>
-                    <div class="form-row">
-                        <select name="studio" class="form-input" aria-label="Studiopräferenz">
-                            <option value="" selected>Studio</option>
-                            <option>Noch unentschlossen</option>
-                            <option>Studio 1</option>
-                            <option>Studio 2</option>
-                            <option>Studio 3</option>
-                            <option>Studio 4</option>
-                            <option>Studio 5</option>
-                            <option>Studio 6</option>
-                        </select>
-                        <select name="budget" class="form-input" aria-label="Budgetrahmen">
-                            <option value="" selected>Budget</option>
-                            <option>Noch unentschlossen</option>
-                            <option>bis 1.000 €</option>
-                            <option>1.000 – 3.000 €</option>
-                            <option>3.000 – 7.000 €</option>
-                            <option>über 7.000 €</option>
-                        </select>
-                    </div>
-                    <textarea name="message" class="form-input" rows="5" placeholder="Kurzbeschreibung & Wünsche (z. B. Technik, Catering, Bestuhlung)"></textarea>
+                    <input type="tel" name="phone" class="form-input" placeholder="Telefon (optional)">
+                    <textarea name="message" class="form-input" rows="6" placeholder="Deine Nachricht" required></textarea>
                     <button type="submit" class="btn btn-teal">Anfrage senden</button>
                     <p class="form-hint">Wir melden uns innerhalb von 24 Stunden mit einem unverbindlichen Erstangebot.</p>
                 </form>

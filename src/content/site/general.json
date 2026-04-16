@@ -56,7 +56,9 @@
       "Hochzeiten & Jubiläen",
       "Geburtstage & Familienfeiern",
       "Konferenzen, Meetings & Produktpräsentationen",
-      "Firmenevents & Teambuildings"
+      "Firmenevents & Teambuildings",
+      "Workshops & Seminare",
+      "Wöchentliche Kurse"
     ],
     "badges": [
       { "icon": "fas fa-building", "text": "7 Studios" },

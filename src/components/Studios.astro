@@ -6,39 +6,71 @@ const studios = (await getCollection('studios')).sort((a, b) => a.data.order - b
 const { cafe } = siteData;
 ---
 
-<section class="studios-carousel bg-beige" id="studios">
+<section class="studios bg-beige" id="studios">
     <div class="container">
         <h2 class="section-title text-raisin">Studios</h2>
-        <div class="studios-scroll">
-            {studios.map((studio) => {
-                const d = studio.data;
-                return (
-                    <div class="studio-slide">
-                        <div class="studio-slide-image">
-                            <img src={d.image} alt={d.name} loading="lazy" data-studio-name={d.name}>
-                            <div class="studio-slide-zoom-hint">
-                                <i class="fas fa-search-plus"></i>
+
+        {studios.map((studio, index) => {
+            const d = studio.data;
+            const isFirst = index === 0;
+            return (
+                <div class="category-accordion">
+                    <button
+                        class="category-banner"
+                        aria-expanded={isFirst ? 'true' : 'false'}
+                        data-studio={studio.id}
+                    >
+                        <img
+                            src={d.image}
+                            alt={d.name}
+                            class="category-banner-img category-banner-img--blurred"
+                            loading="lazy"
+                        />
+                        <div class="category-banner-overlay">
+                            <i class="fas fa-door-open"></i>
+                            <span class="category-banner-label">{d.name}</span>
+                            <i class="fas fa-chevron-down category-chevron"></i>
+                        </div>
+                    </button>
+
+                    <div class="category-panel" style={isFirst ? '' : 'max-height: 0;'}>
+                        <div class="course-single-card">
+                            <div class="studio-image-wrapper">
+                                <img src={d.image} alt={d.name} class="studio-image" loading="lazy" data-studio-name={d.name} />
+                            </div>
+                            <div class="studio-content">
+                                <h3 class="studio-name">{d.name}</h3>
+                                <p class="studio-description">{d.description}</p>
                             </div>
                         </div>
-                        <div class="studio-slide-content">
-                            <h3>{d.name}</h3>
-                            <p class="studio-description">{d.description}</p>
-                            <img src="/images/custom-logo.png" alt="Bewegungswelten Logo" class="studio-header-logo" style="width: 50px; height: auto; margin-top: 10px; opacity: 0.7;" loading="eager">
-                        </div>
-                    </div>
-                );
-            })}
-            <div class="studio-slide">
-                <div class="studio-slide-image">
-                    <img src={cafe.images[0]} alt="Empfangsbereich" loading="lazy" data-studio-name="Empfangsbereich">
-                    <div class="studio-slide-zoom-hint">
-                        <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
-                <div class="studio-slide-content">
-                    <h3>{cafe.subtitle}</h3>
-                    <p class="studio-description">{cafe.description}</p>
-                    <img src="/images/custom-logo.png" alt="Bewegungswelten Logo" class="studio-header-logo" style="width: 50px; height: auto; margin-top: 10px; opacity: 0.7;" loading="eager">
+            );
+        })}
+
+        <div class="category-accordion">
+            <button class="category-banner" aria-expanded="false" data-studio="empfangsbereich">
+                <img
+                    src={cafe.images[0]}
+                    alt="Empfangsbereich"
+                    class="category-banner-img category-banner-img--blurred"
+                    loading="lazy"
+                />
+                <div class="category-banner-overlay">
+                    <i class="fas fa-mug-hot"></i>
+                    <span class="category-banner-label">{cafe.subtitle}</span>
+                    <i class="fas fa-chevron-down category-chevron"></i>
+                </div>
+            </button>
+            <div class="category-panel" style="max-height: 0;">
+                <div class="course-single-card">
+                    <div class="studio-image-wrapper">
+                        <img src={cafe.images[0]} alt="Empfangsbereich" class="studio-image" loading="lazy" data-studio-name="Empfangsbereich" />
+                    </div>
+                    <div class="studio-content">
+                        <h3 class="studio-name">{cafe.subtitle}</h3>
+                        <p class="studio-description">{cafe.description}</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 ---
 name: "Forró Immersion"
-image: "/images/forro-immersion.png"
+image: "/images/forro-immersion.jpg"
 logo: ""
 icon: "fas fa-music"
 description: "Forró Immersion Winter Edition with Fábio Reis – eine intensive Reise durch Partnertanz, Connection und Musikalität über 12 Wochen."

@@ -629,6 +629,49 @@ section {
   }
 }
 
+.legal-page {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-beige);
+  min-height: 70vh;
+}
+
+.legal-page h1 {
+  color: var(--color-raisin);
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--font-heading);
+}
+
+.legal-page h2 {
+  color: var(--color-raisin);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-heading);
+}
+
+.legal-page h3 {
+  color: var(--color-raisin);
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-heading);
+}
+
+.legal-page p,
+.legal-page li {
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-raisin);
+}
+
+.legal-page a {
+  color: var(--color-teal);
+  text-decoration: underline;
+}
+
+.legal-page ul {
+  margin-left: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
 .mieter-divider {
   border: none;
   border-top: 2px solid var(--color-sage);
